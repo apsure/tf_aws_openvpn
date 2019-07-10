@@ -90,7 +90,7 @@ USERDATA
 
 resource "aws_elb" "openvpn" {
   name                        = "openvpn-elb"
-  subnets                     = ["${var.public_subnet_ids}"]
+  subnets                     = "${var.public_subnet_ids}"
   internal                    = false
   idle_timeout                = 30
   connection_draining         = true
