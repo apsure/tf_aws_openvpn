@@ -7,7 +7,7 @@ resource "aws_security_group" "openvpn" {
   vpc_id      = "${var.vpc_id}"
   description = "OpenVPN security group"
 
-  tags {
+  tags = {
     Name = "${var.name}"
   }
 
