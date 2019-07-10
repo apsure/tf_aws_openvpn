@@ -115,7 +115,7 @@ resource "aws_elb" "openvpn" {
     interval            = 20
   }
 
-  tags {
+  tags = {
     Name = "openvpn-elb"
   }
 }
