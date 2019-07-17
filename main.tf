@@ -51,6 +51,7 @@ resource "aws_instance" "openvpn" {
   instance_type = "${var.instance_type}"
   key_name      = "${var.key_name}"
   subnet_id     = "${element(var.public_subnet_ids, 0)}"
+  source_dest_check = false
 
   vpc_security_group_ids = ["${aws_security_group.openvpn.id}"]
 
